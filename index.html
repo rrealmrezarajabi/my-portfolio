@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohamad Reza Rajabi - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">M A M A R E Z A</div>
+        <nav class="nav">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#skills">My Skills</a>
+          <a href="#projects">My Projects</a>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+          <!-- Left Column - Text Content -->
+          <div class="hero-text">
+            <h1 class="hero-title">Hi, I'm Mohamad Reza Rajabi</h1>
+            <h2 class="hero-subtitle">React Frontend Developer</h2>
+            <p class="hero-description">
+              I'm a passionate beginner React frontend developer with a strong
+              foundation in HTML, CSS, and JavaScript. I love creating beautiful
+              and functional user interfaces and I'm constantly learning and
+              improving my skills in modern web development technologies.
+            </p>
+            <div class="social-icons">
+              <a href="https://github.com/rrealmrezarajabi" class="social-icon"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/mohamad-reza-rajabi-781678374/?originalSubdomain=ir"
+                class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Right Column - Profile Image -->
+          <div class="hero-image">
+            <div class="image-container">
+              <div class="profile-frame">
+                <img
+                  src="photo_2025-08-06_23-35-47.jpg"
+                  alt="Mohamad Reza Rajabi"
+                  class="profile-image"
+                />
+                <div class="profile-glow"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+          <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+              <div class="about-text">
+                <p>
+                  I'm a dedicated beginner React frontend developer with a
+                  passion for creating engaging and user-friendly web
+                  applications. My journey in web development started with HTML
+                  and CSS, and I've been expanding my knowledge to include
+                  JavaScript and React.
+                </p>
+                <p>
+                  I believe in writing clean, maintainable code and staying
+                  up-to-date with the latest web development trends and best
+                  practices. I'm always eager to learn new technologies and take
+                  on challenging projects that help me grow as a developer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+          <div class="section-content">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-html5"></i>
+                </div>
+                <h3>HTML</h3>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>CSS</h3>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <h3>JavaScript</h3>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">
+                  <i class="fab fa-react"></i>
+                </div>
+                <h3>React</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+          <div class="section-content">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+              <div class="project-card coming-soon">
+                <div class="project-overlay">
+                  <h3>Coming Soon</h3>
+                  <p>Exciting projects are in development</p>
+                </div>
+              </div>
+              <div class="project-card coming-soon">
+                <div class="project-overlay">
+                  <h3>Coming Soon</h3>
+                  <p>More amazing projects on the way</p>
+                </div>
+              </div>
+              <div class="project-card coming-soon">
+                <div class="project-overlay">
+                  <h3>Coming Soon</h3>
+                  <p>Stay tuned for updates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const headerHeight = document.querySelector(".header").offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight - 20;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Active navigation highlighting
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav a");
+        const headerHeight = document.querySelector(".header").offsetHeight;
+
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - headerHeight - 100;
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // Scroll animations for sections
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll(".section").forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Add scroll effect to header
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector(".header");
+        if (window.scrollY > 100) {
+          header.style.background = "rgba(26, 26, 46, 0.98)";
+          header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.3)";
+        } else {
+          header.style.background = "rgba(26, 26, 46, 0.95)";
+          header.style.boxShadow = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
