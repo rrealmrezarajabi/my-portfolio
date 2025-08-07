@@ -25,8 +25,18 @@ body {
 
 /* Gradient Variables */
 :root {
-  --main-gradient: linear-gradient(90deg, #a855f7 0%, #ff5ecd 50%, #3ecbff 100%);
-  --main-gradient-rev: linear-gradient(90deg, #3ecbff 0%, #ff5ecd 50%, #a855f7 100%);
+  --main-gradient: linear-gradient(
+    90deg,
+    #a855f7 0%,
+    #ff5ecd 50%,
+    #3ecbff 100%
+  );
+  --main-gradient-rev: linear-gradient(
+    90deg,
+    #3ecbff 0%,
+    #ff5ecd 50%,
+    #a855f7 100%
+  );
   --main-gradient-fallback: #a855f7;
 }
 
@@ -53,7 +63,7 @@ body {
 }
 
 .nav a.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 50%;
@@ -137,7 +147,7 @@ body {
 
 /* Hero Section */
 .hero-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
@@ -220,13 +230,15 @@ body {
   z-index: 1;
 }
 
-.social-icon:hover, .social-icon:focus {
+.social-icon:hover,
+.social-icon:focus {
   color: #fff;
   background: #ff5ecd;
   box-shadow: 0 10px 25px rgba(255, 94, 205, 0.3);
 }
 
-.social-icon:hover i, .social-icon:focus i {
+.social-icon:hover i,
+.social-icon:focus i {
   color: #fff;
   background: none;
 }
@@ -260,7 +272,7 @@ body {
 }
 
 .profile-frame::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -2px;
   left: -2px;
@@ -670,7 +682,7 @@ body {
     width: 100%;
     margin: 0;
     padding-bottom: 4px;
-    border-bottom: 1px solid rgba(168,85,247,0.08);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.08);
     background: none;
   }
   .nav a {
@@ -857,6 +869,7 @@ body {
     width: 250px;
     height: 250px;
     margin-left: 120px;
+    margin-top: 100px;
   }
 
   .section {
@@ -928,7 +941,6 @@ body {
 
   .hero-title {
     font-size: 24px;
-    
   }
 
   .hero-subtitle {
@@ -937,12 +949,12 @@ body {
 
   .hero-description {
     font-size: 14px;
-    
   }
 
   .image-container {
     width: 200px;
     height: 200px;
+    margin-top: 90px;
   }
 
   .section-title {
@@ -966,7 +978,6 @@ body {
   .nav a {
     font-size: 12px;
     padding: 4px 8px;
-    
   }
 
   .project-card {
